@@ -8,12 +8,17 @@ public class AverageArithmetic {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         System.out.println("Введите все числа, ср. ариф. которых вы хотите получить:");
+        System.out.println("Ср. арифм. = " + aa(number));
+    }
+
+    static float aa(int number) {
+        Scanner scanner = new Scanner(System.in);
         float sum = 0;
-        for (int i = 0; i < number; i++) {
+        int i = 0;
+        while (i < number) {
             int g = scanner.nextInt();
-            sum += g;
+            sum += g; i++;
         }
-        float average_arithmetic = sum / number;
-        System.out.println("Ср. арифм. = " + average_arithmetic);
+        return sum / number;
     }
 }
